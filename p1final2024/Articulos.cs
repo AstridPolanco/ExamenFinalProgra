@@ -21,7 +21,7 @@ namespace p1final2024
 
         private void listarArticulos()
         {
-            dgvArticulo.DataSource = articulodAO.ReadAll();
+            dgvArticulo.DataSource = articuloDAO.ReadAll();
             dgvArticulos.Columns["image"].Visible = false;
         }
 
@@ -37,8 +37,10 @@ namespace p1final2024
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtiene la ruta completa del archivo seleccionado
-
+                    string filePath = openFileDialog.FileName;
                     // Carga la imagen en el PictureBox
+                    pcbImagen.Image = Image.FromFile(filePath);
+
                 }
             }
         }

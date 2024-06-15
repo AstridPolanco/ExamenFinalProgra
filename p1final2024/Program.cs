@@ -6,6 +6,15 @@ using System.Windows.Forms;
 
 namespace p1final2024
 {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+    }
+}
+{
     internal static class Program
     {
         /// <summary>
